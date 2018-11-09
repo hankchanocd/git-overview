@@ -6,23 +6,23 @@
 <img alt="demo" width="850" src="https://github.com/hankchanocd/git-overview/blob/master/images/demo.png" />
 </p>
 
-`git overview` gives you all you need for `git` stats summary at terminal.
+Based on [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats), `git overview` presents all `git` stats summary you need at terminal.
 
-It shows you all at one glance:
+It shows you all the info at one glance:
 
 - Calendar ([`git-stats`](https://github.com/tj/git-extras/blob/master/Installation.md))
 
-- Repo summary
+- Repo summary ([`git summary`](https://github.com/tj/git-extras/blob/master/Commands.md#git-summary))
 
-- `git info`
+- Branch info ([`git info`](https://github.com/tj/git-extras/blob/master/Commands.md#git-info))
 
-- Branch tree
+- Branch tree ([`git show-tree`](https://github.com/tj/git-extras/blob/master/Commands.md#git-show-tree))
 
-- Effort analysis
+- Effort analysis ([`git effort`](https://github.com/tj/git-extras/blob/master/Commands.md#git-effort))
 
 ## Install
 
-Clone the repo, and put `git-overview` to `~/bin` or anywhere that's in your `PATH`.
+Clone the repo, and put `git-overview` in `~/bin` or anywhere that's in your `PATH`.
 
 ## Before-Use
 
@@ -34,8 +34,12 @@ Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installati
 $ git overview
 ```
 
-`git overview` shows relevant info according to the repo size. Some featured will be turned off against large repo to avoid bad performance.
+`git overview` is adaptable to large repo. While some features like `git summary` will show more contributors' info in large repo, features like `git effort` are turned off to avoid long hanging.
 
 ## Changelog
 
 **2018-Nov-8:** `v1` published.
+
+## License
+
+[MIT](./LICENSE)
