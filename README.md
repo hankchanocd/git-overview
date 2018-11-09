@@ -6,7 +6,7 @@
 <img alt="demo" width="850" src="https://github.com/hankchanocd/git-overview/blob/master/images/demo.png" />
 </p>
 
-Based on [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats), `git overview` presents all `git` stats summary you need at terminal.
+Based on [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats), `git overview` presents all `git` stats summary you need at terminal, helping you quickly orient with the repository.
 
 It shows you all the info at one glance:
 
@@ -34,7 +34,7 @@ Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installati
 $ git overview
 ```
 
-`git overview` is adaptable to large repo. While some features like `git summary` will show more contributors' info in large repo, features like `git effort` are turned off to avoid long hanging.
+`git overview` is adaptable to large repos. While features like `git summary` shows more contributors' info in large repos, features like `git effort` that traverse the whole `.git/` are turned off to avoid long hanging.
 
 ## Changelog
 

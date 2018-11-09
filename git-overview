@@ -2,6 +2,8 @@
 #!/usr/bin/env zsh
 
 # Print a quick insight view of git repository at terminal
+#
+# Repo: https://github.com/hankchanocd/git-overview
 
 #########################
 ### Helper functions ####
