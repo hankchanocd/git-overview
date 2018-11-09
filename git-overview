@@ -22,7 +22,7 @@ calendar() {
 
 # Show author summary from `git-extras`
 repo-summary() {
-	if [[ -x "$1" ]]; then
+	if [ -z $1 ]; then
 		count=17 # The default is to retrieve only the top ten contributors
 	else
 		count=$(($1 + 7))
