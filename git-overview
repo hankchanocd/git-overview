@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+#!/usr/bin/env zsh
+
+# Print a quick insight view of git repository at terminal
+
+#########################
+### Helper functions ####
+hr() {
+	echo " "
+}
+
+#########################
+#### Child functions ####
+# Show calendar from `git-stats`
+calendar() {
+	if type git-stats >/dev/null 2>&1; then
+		git-stats -g
+	fi
+}
+
+# Show author summary from `git-extras`
+repo-summary() {
+	if type git-summary >/dev/null 2>&1; then
+		git summary | head -n 17
+	fi
+}
+
+# Show info from built-in `git-info`
+info() {
+	git info --no-config
+}
+
+# Show show-tree from `git-extras`
+show-tree() {
+	echo "## Branch tree"
+	hr
+
+	git log --color --all --graph --decorate --oneline --simplify-by-decoration
+
+	hr
+    hr
+    hr
+}
+
+# Show effort from `git-extras`
+effort() {
+	echo "Effort"
+	if type git-effort >/dev/null 2>&1; then
+		git effort --above 5
+	fi
+}
+
+#########################
+######### main ##########
+summary() {
+
+	calendar
+
+	repo-summary
+
+	info
+
+	show-tree
+
+	effort
+}
+
+main() {
+	summary |
+		GREP_COLOR='00;38;5;226' grep --color=always '.*\#\#.*\|$' | # highlight category titles
+		less -R
+}
+main
