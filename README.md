@@ -5,7 +5,7 @@
 <br />
 <br />
 <p align="center">
-<img alt="demo" width="700" src="https://github.com/hankchanocd/npmlist/blob/master/images/demo.png" />
+<img alt="demo" width="850" src="https://github.com/hankchanocd/git-overview/blob/master/images/demo.png" />
 </p>
 <br />
 
