@@ -40,6 +40,8 @@ $ git overview
 
 **2018-Nov-8:** `v1` published.
 
+**2018-Nov-9:** Automate commit and file transfer process with [`ghooks`](https://github.com/ghooks-org/ghooks) from npm.
+
 ## License
 
 [MIT](./LICENSE)
