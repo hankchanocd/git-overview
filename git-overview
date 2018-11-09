@@ -20,8 +20,14 @@ calendar() {
 
 # Show author summary from `git-extras`
 repo-summary() {
+	if [[ -x "$1" ]]; then
+		count=17 # The default is to retrieve only the top ten contributors
+	else
+		count=$(($1 + 7))
+	fi
+
 	if type git-summary >/dev/null 2>&1; then
-		git summary | head -n 17
+		git summary | head -n $count
 	fi
 }
 
@@ -38,31 +44,73 @@ show-tree() {
 	git log --color --all --graph --decorate --oneline --simplify-by-decoration
 
 	hr
-    hr
-    hr
+	hr
+	hr
 }
 
 # Show effort from `git-extras`
 effort() {
+	if [[ -x "$1" ]]; then
+		commit=5
+	else
+		commit="$1"
+	fi
+
 	echo "Effort"
 	if type git-effort >/dev/null 2>&1; then
-		git effort --above 5
+		git effort --above "$commit"
 	fi
 }
 
 #########################
 ######### main ##########
 summary() {
+	count=$(git rev-list HEAD --count)
 
-	calendar
+	if (($count <= 300)); then
+		calendar
 
-	repo-summary
+		repo-summary
 
-	info
+		info
 
-	show-tree
+		show-tree
 
-	effort
+		effort 1
+
+	elif (($count <= 1200)); then
+		calendar
+
+		repo-summary
+
+		info
+
+		show-tree
+
+		effort 5
+
+	elif (($count <= 10000)); then
+		calendar
+
+		repo-summary 20
+
+		info
+
+		show-tree
+
+		effort 20
+
+	else
+		calendar
+
+		repo-summary 20
+
+		info
+
+		show-tree
+
+        echo 'This repo has more than 10000 commits. Rendering `Effort` has bad performance.'
+	fi
 }
 
 main() {
