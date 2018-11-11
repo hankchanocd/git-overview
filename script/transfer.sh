@@ -16,7 +16,9 @@ main() {
 
 	fi
 
-	echo 'Complete' # Light green followed by white
+	# `echo -e` only works when the script is invoked with bash instead of the built-in dash
+	# See: https://askubuntu.com/questions/434153/echo-command-with-color-option-in-script-and-command-works-differently
+	echo -e '\e[92mComplete\e[0m' # Light green followed by white
 	echo ' '
 }
 
