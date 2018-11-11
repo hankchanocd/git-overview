@@ -22,11 +22,11 @@ It shows you all the info at one glance:
 
 ## Install
 
-Clone the repo, and put `git-overview` in `~/bin` or anywhere that's in your `PATH`.
+Clone the repo, and run `npm run transfer` to transfer `./git-overview` to `~/bin`, or manually invoke `./script/transfer.sh`. If you have a more desired `PATH` for storing scripts, configure `./script/transfer.sh` directly.
 
 ## Before-Use
 
-Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats) are installed. Many `git overview`'s features rely on the statistics these two provide.
+Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats) are installed globally. Many `git overview`'s features rely on the statistics these two provide.
 
 ## Usage
 
@@ -42,7 +42,7 @@ $ git overview
 
 **2018-Nov-9**: Use [`commitizen`](http://commitizen.github.io/cz-cli/) to standardize commit process.
 
-**2018-Nov-11**: Automate file transfer to `~/bin` with [`ghooks`](https://github.com/ghooks-org/ghooks).
+**2018-Nov-11**: Use [`ghooks`](https://github.com/ghooks-org/ghooks) to automate file transfer to `~/bin`.
 
 ## License
 
