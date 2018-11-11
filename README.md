@@ -38,9 +38,11 @@ $ git overview
 
 ## Changelog
 
-**2018-Nov-8:** `v1` published.
+**2018-Nov-8**: `v1` published.
 
-**2018-Nov-9:** Automate commit and file transfer process with [`ghooks`](https://github.com/ghooks-org/ghooks) from npm.
+**2018-Nov-9**: Use [`commitizen`](http://commitizen.github.io/cz-cli/) to standardize commit process.
+
+**2018-Nov-11**: Automate file transfer to `~/bin` with [`ghooks`](https://github.com/ghooks-org/ghooks).
 
 ## License
 
