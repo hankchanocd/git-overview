@@ -44,6 +44,10 @@ $ git overview
 
 **2018-Nov-11**: Use [`ghooks`](https://github.com/ghooks-org/ghooks) to automate file transfer to `~/bin`.
 
+## Others
+
+See [Dotfiles](https://gitlab.com/hankchanocd/dotfiles) for my other works on `git`.
+
 ## License
 
 [MIT](./LICENSE)
