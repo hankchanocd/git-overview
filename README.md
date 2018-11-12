@@ -22,7 +22,9 @@ It shows you all the info at one glance:
 
 ## Install
 
-Clone the repo, and run `npm run transfer` to transfer `./git-overview` to `~/bin`, or manually invoke `./script/transfer.sh`. If you have a more desired `PATH` for storing scripts, configure `./script/transfer.sh` directly.
+Clone the repo, and run `npm run transfer` to transfer `./git-overview` to `~/bin`, or manually invoke `./script/transfer.sh` if you are not familiar with `npm`.
+
+If you have a more desired `PATH` for storing scripts, configure `./script/transfer.sh` directly or ignore transfer instructions.
 
 ## Before-Use
 
