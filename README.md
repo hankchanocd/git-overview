@@ -26,7 +26,7 @@ Clone the repo, and run `npm run transfer` to transfer `./git-overview` to `~/bi
 
 If you have a more desired `PATH` for storing scripts, configure `./script/transfer.sh` directly or ignore transfer instructions.
 
-## Before-Use
+## Requirements
 
 Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats) are installed globally. Many `git overview`'s features rely on the statistics these two provide.
 
@@ -49,6 +49,10 @@ $ git overview
 ## Others
 
 See [Dotfiles](https://gitlab.com/hankchanocd/dotfiles) for my other works on `git`.
+
+See [git-stack](https://github.com/hankchanocd/git-stack) - Compare against master branch with fzf.
+
+See [git-commands](https://github.com/hankchanocd/git-commands) - Fuzzy search git commands with help.
 
 ## License
 
