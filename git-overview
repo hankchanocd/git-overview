@@ -5,14 +5,12 @@
 #
 # Repo: https://github.com/hankchanocd/git-overview
 
-#########################
-### Helper functions ####
+############### Helper functions ################
 hr() {
 	echo " "
 }
 
-#########################
-#### Child functions ####
+############### Child functions ################
 # Show calendar from `git-stats`
 calendar() {
 	if type git-stats >/dev/null 2>&1; then
@@ -64,8 +62,8 @@ effort() {
 	fi
 }
 
-#########################
-######### main ##########
+
+############### Main ################
 summary() {
 	count=$(git rev-list HEAD --count)
 
@@ -120,4 +118,35 @@ main() {
 		GREP_COLOR='00;38;5;226' grep --color=always '.*\#\#.*\|$' | # highlight category titles
 		less -R
 }
+
+
+################ Help ################
+usage="usage: $(basename "$0") [<options>]
+
+A quick git repository insight at terminal
+
+where:
+	-h  show this help text"
+
+############# Parse options ##############
+while getopts ':h' option; do
+	case "$option" in
+	h)
+		echo "$usage"
+		exit 0
+		;;
+	:)
+		main
+		exit
+		;;
+	\?)
+		printf "illegal option: -%s\n" "$OPTARG" >&2
+		echo -e "$usage" >&2
+		exit 1
+		;;
+	esac
+done
+shift $((OPTIND - 1))
+
+# Default case when no option provided
 main
