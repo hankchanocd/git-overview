@@ -6,15 +6,17 @@
 <img alt="demo" width="850" src="https://github.com/hankchanocd/git-overview/blob/master/images/demo.png" />
 </p>
 
-Based on [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats), `git overview` presents all `git` stats summary you need at terminal, helping you quickly orient with the repository.
+Based on [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md), [`git-recent`](https://github.com/paulirish/git-recent), and [`git-stats`](https://github.com/IonicaBizau/git-stats), `git overview` presents all `git` stats summary you need at terminal, helping you quickly orient with the repository.
 
 It shows you all the info at one glance:
 
-- Calendar ([`git-stats`](https://github.com/tj/git-extras/blob/master/Installation.md))
+- Calendar ([`git stats`](https://github.com/IonicaBizau/git-stats))
 
 - Repo summary ([`git summary`](https://github.com/tj/git-extras/blob/master/Commands.md#git-summary))
 
 - Branch info ([`git info`](https://github.com/tj/git-extras/blob/master/Commands.md#git-info))
+
+- Branch tip ([`git-recent`](https://github.com/paulirish/git-recent))
 
 - Branch tree ([`git show-tree`](https://github.com/tj/git-extras/blob/master/Commands.md#git-show-tree))
 
@@ -28,7 +30,7 @@ If you have a more desired `PATH` for storing scripts, configure `./script/trans
 
 ## Requirements
 
-Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md) and [`git-stats`](https://github.com/IonicaBizau/git-stats) are installed globally. Many `git overview`'s features rely on the statistics these two provide.
+Make sure [`git-extras`](https://github.com/tj/git-extras/blob/master/Installation.md), [`git-recent`](https://github.com/paulirish/git-recent), and [`git-stats`](https://github.com/IonicaBizau/git-stats) are installed globally. You don't have to install them all, since `git overview` is smart enough to forgo the uninstalled commands. But many `git overview`'s features rely on the statistics these three provide.
 
 ## Usage
 
@@ -45,6 +47,8 @@ $ git overview
 **2018-Nov-9**: Use [`commitizen`](http://commitizen.github.io/cz-cli/) to standardize commit process.
 
 **2018-Nov-11**: Use [`ghooks`](https://github.com/ghooks-org/ghooks) to automate file transfer to `~/bin`.
+
+**2018-Nov-14**: Add [`git-recent`](https://github.com/paulirish/git-recent).
 
 ## Others
 

@@ -36,9 +36,17 @@ info() {
 	git info --no-config
 }
 
-# Show show-tree from `git-extras`
+# Show `git-recent` (ref: https://github.com/paulirish/git-recent)
+# Show `git show-tree` from `git-extras`
 show-tree() {
-	echo "## Branch tree"
+	echo "## Branch tip:"
+	hr
+
+	if type git-recent >/dev/null 2>&1; then
+		git recent | head -n $count
+	fi
+
+	echo "## Branch tree:"
 	hr
 
 	git log --color --all --graph --decorate --oneline --simplify-by-decoration
@@ -61,7 +69,6 @@ effort() {
 		git effort --above "$commit"
 	fi
 }
-
 
 ############### Main ################
 summary() {
@@ -109,7 +116,7 @@ summary() {
 
 		show-tree
 
-        echo 'This repo has more than 10000 commits. Rendering `Effort` has bad performance.'
+		echo 'This repo has more than 10000 commits. Rendering `Effort` has bad performance.'
 	fi
 }
 
@@ -118,7 +125,6 @@ main() {
 		GREP_COLOR='00;38;5;226' grep --color=always '.*\#\#.*\|$' | # highlight category titles
 		less -R
 }
-
 
 ################ Help ################
 usage="usage: $(basename "$0") [<options>]
