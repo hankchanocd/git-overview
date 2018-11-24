@@ -121,6 +121,9 @@ summary() {
 }
 
 main() {
+	# Check if it's a git repo
+	[[ $(git root 2>&1) == 'Not a git repo!' ]] && echo "Not a git repo!" && exit 1
+
 	summary |
 		GREP_COLOR='00;38;5;226' grep --color=always '.*\#\#.*\|$' | # highlight category titles
 		less -R
